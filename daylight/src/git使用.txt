@@ -1,0 +1,14 @@
+1、创建github上面的仓库
+2、安装git.exe
+3、生成ssh key $ ssh-keygen -t rsa -C “6215048wjl@163.com”
+    1）是路径确认，直接按回车存默认路径即可
+    2）直接回车键，这里我们不使用密码进行登录, 用密码太麻烦;
+    3）直接回车键
+4、去对应目录C:\Users\specter\.ssh里（specter为电脑用户名，每个人不同）用记事本打开id_rsa.pub，得到ssh key公钥
+5、github账号配置ssh key  切换到github，展开个人头像的小三角，点击settings
+6、   git init //把这个目录变成Git可以管理的仓库
+  　　git add README.md //文件添加到仓库
+  　　git add . //不但可以跟单一文件，还可以跟通配符，更可以跟目录。一个点就把当前目录下所有未追踪的文件全部add了
+  　　git commit -m "first commit" //把文件提交到仓库
+  　　git remote add origin git@github.com:wangjiax9/practice.git //关联远程仓库
+  　　git push -u origin master //把本地库的所有内容推送到远程库上
